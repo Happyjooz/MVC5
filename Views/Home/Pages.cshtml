@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Pages";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Here, you can visualize all your projects.</p>
+
+<div class="btn-group">
+    <center>
+        <button onclick="myFunction('http://localhost/demoAutomate/')">Project 1</button>
+        <button onclick="myFunction('http://localhost/demoAutomate/')">Project 2</button>
+        <button onclick="myFunction('https://fr.wikipedia.org/')">Project 3</button>
+        <button onclick="myFunction('http://contextor.eu/fr/')">Project 4</button>
+    </center>
+</div>
+
+<script>
+    function myFunction(loc) {
+        document.getElementById("myiframe").src = loc;
+    }
+</script>
+
+
+<iframe width="450" height="500" id="myiframe"></iframe>
+
+@*<table style="width: 500px; height: 500px;">
+        <div class="container">
+            <div class="row-fluid">
+                <iframe width="450" height="500" src="http://localhost/demoAutomate/"></iframe>
+            </div>
+        </div>
+    </table>*@
+
+<style>
+    .btn-group button {
+        background-color: #4CAF50; /* Green background */
+        border: 1px solid green; /* Green border */
+        color: white; /* White text */
+        padding: 10px 24px; /* Some padding */
+        cursor: pointer; /* Pointer/hand icon */
+        text-align: center;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    /* Clear floats (clearfix hack) */
+    .btn-group:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    /* Prevent double borders */
+    .btn-group button:not(:last-child) {
+        border-right: none;
+    }
+
+    /* Add a background color on hover */
+    .btn-group button:hover {
+        background-color: #3e8e41;
+    }
+</style>
+
+
